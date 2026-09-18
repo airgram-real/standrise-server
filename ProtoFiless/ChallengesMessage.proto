@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "CommonMessage.proto";
+import "CurrencyMessage.proto";
+import "InventoryMessage.proto";
+
+message CurrentChallenge
+{
+    string gameEventChallengeId = 1;
+    string code = 2;
+    int32 keyItemDefinitionId = 3;
+    LocalizedTitle localizedTitle = 4;
+    string action = 5;
+    DayRange dayRange = 6;
+    string type = 7;
+    int32 eventPoints = 8;
+    int32 targetPoints = 9;
+    int32 currentPoints = 10;
+    RewardInfo reward = 11;
+}
+
+message GetCurrentChallengesRequest
+{
+    string gameEventId = 1;
+    bool completed = 2;
+}
+
+message GetCurrentChallengesResponse
+{
+    repeated CurrentChallenge challenges = 1;
+}
+
+message ProgressChallengeRequest
+{
+    string gameEventChallengeId = 1;
+    int32 points = 2;
+}
+message ProgressChallengeResponse
+{
+    bool completed = 1;
+    int32 challengePoints = 2;
+    Reward challengeReward = 3;
+    int32 EventPoints = 4;
+    map<string, int32> eventGamePassLevels = 5;
+    Reward EventReward = 6;
+}

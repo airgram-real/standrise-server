@@ -1,0 +1,116 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!--
+      Сервер жалуется на 250 МБ RSS - это почти наверняка НЕ утечка (проверил основные
+      ConcurrentDictionary в StaticClasses/UserService - Users/PlayersStatus/EventSenders/
+      UserServices/Lobbies корректно чистятся в ForceDisconnect), а Server GC. .NET по
+      умолчанию на многоядерной машине включает Server GC, который резервирует отдельный
+      сегмент кучи НА КАЖДОЕ ЯДРО ради throughput - для консольного TCP/UDP/HTTP-сервиса
+      (I/O-bound, не CPU-bound) это чистый оверхед в памяти без реальной пользы.
+      Workstation GC даёт тот же функционал при заметно меньшем базовом footprint.
+    -->
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.107.9" />
+    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.103.16" />
+    <PackageReference Include="DnsClient" Version="1.7.0" />
+    <PackageReference Include="Google.Apis" Version="1.61.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.61.0" />
+    <PackageReference Include="Google.Apis.Core" Version="1.61.0" />
+    <PackageReference Include="Google.Apis.Oauth2.v2" Version="1.61.0.1869" />
+    <PackageReference Include="Google.Protobuf" Version="3.2.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
+    <PackageReference Include="Telegram.Bot" Version="22.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AdminBot\**" />
+    <EmbeddedResource Remove="AdminBot\**" />
+    <None Remove="AdminBot\**" />
+    <Compile Remove="tools\**" />
+    <EmbeddedResource Remove="tools\**" />
+    <None Remove="tools\**" />
+    <!-- tests\ собирается отдельным проектом (свой Main), в сборку сервера не входит -->
+    <Compile Remove="tests\**" />
+    <EmbeddedResource Remove="tests\**" />
+    <None Remove="tests\**" />
+    <!-- Web\ — сайт projectre.work, отдельный процесс и свой Main. В сборку сервера не входит. -->
+    <Compile Remove="Web\**" />
+    <EmbeddedResource Remove="Web\**" />
+    <None Remove="Web\**" />
+    <Content Remove="Web\**" />
+    <Compile Remove="BoltNew\**" />
+    <EmbeddedResource Remove="BoltNew\**" />
+    <None Remove="BoltNew\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\StandRise.inventory_item_definition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HotWinterParty2023.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CursedSouls.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bot_tokens.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="deploy\local.settings.example.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>local.settings.example.json</TargetPath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="t\**\*.cs" />
+    <None Remove="t\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="SERV\**\*.cs" />
+    <Compile Remove="0.15.0\**\*.cs" />
+    <Compile Remove="main\**\*.cs" />
+    <Compile Remove="Assembly-CSharp\**\*.cs" />
+    <Compile Remove="Scripts\**\*.cs" />
+    <Compile Remove="PhotonPlugin\**\*.cs" />
+    <Compile Remove="PhotonRanked\**\*.cs" />
+    <Compile Remove="РќРѕРІР°СЏ РїР°РїРєР°\**\*.cs" />
+    <Compile Remove="Новая папка\**\*.cs" />
+    <Compile Remove="Nude photos DONT LOOK\**\*.cs" />
+    <Compile Remove="dump.cs" />
+    <Compile Remove="0.19.0 x64.cs" />
+    <Compile Remove="**\*.bak" />
+    
+    <None Remove="SERV\**\*" />
+    <None Remove="0.15.0\**\*" />
+    <None Remove="main\**\*" />
+    <None Remove="Assembly-CSharp\**\*" />
+    <None Remove="PhotonRanked\**\*" />
+    <None Remove="Новая папка\**\*" />
+    <None Remove="ProtoFiless\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Standoff.TcpServer\**\*.cs" />
+    <EmbeddedResource Remove="Standoff.TcpServer\**\*" />
+    <None Remove="Standoff.TcpServer\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Photon SDK is a separate deployment, exclude from this build entirely -->
+    <Compile Remove="photon-server-sdk_v4-0-29-11263\**\*.cs" />
+    <EmbeddedResource Remove="photon-server-sdk_v4-0-29-11263\**\*" />
+    <None Remove="photon-server-sdk_v4-0-29-11263\**\*" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,77 @@
+00:48:50  ?????????????: True
+00:48:50  
+00:48:50  === ??? 0: ?????????? ???????? ??????? ===
+00:49:15    [OK] RPC PID 1716
+00:49:15    [OK] port 2222 is listening
+00:49:15    [OK] port 2224 is listening
+00:49:15    
+00:49:15    === 6. LOG TAIL ===
+00:49:15    2026-09-16 00:49:07.886 [DEBUG] [Inventory] TCP catalogue bytes built: count=3153, version=639247095035570833, path=C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+00:49:15    2026-09-16 00:49:07.937 [DEBUG] [Inventory] Cached property definitions count=3153
+00:49:15    2026-09-16 00:49:08.488 [DEBUG] Connecting to database Main 
+00:49:15    2026-09-16 00:49:08.632 [DEBUG] Connecting to database Inventory 
+00:49:15    2026-09-16 00:49:08.655 [DEBUG] [Init] Loaded default clan avatar from: C:\StandRise\clan_default_avatar.jpg (3363 bytes)
+00:49:15    2026-09-16 00:49:08.809 [DEBUG] [Init] Default clan avatar 'clan_default_avatar.jpg' stored in avatars collection (3363 bytes)
+00:49:15    2026-09-16 00:49:08.898 [DEBUG] [AlliesMM] required players = 2 (1v1 (2 D,D3¥?D_D§Dø))
+00:49:15    2026-09-16 00:49:08.981 [DEBUG] [AlliesMM] Admin set required players = 2 (1v1 (2 D,D3¥?D_D§Dø))
+00:49:15    2026-09-16 00:49:08.985 [DEBUG] [CompetitiveMM] required players = 2 (1v1 (2 D,D3¥?D_D§Dø))
+00:49:15    2026-09-16 00:49:09.122 [DEBUG] [InventoryCatalogue] D¨¥?D_¥?¥,DøDýD¯DæD«Dø ¥+DæD«Dø 145 D¨¥?DæD'D¬Dæ¥,DøD¬ ¥? D¨¥Ÿ¥?¥,¥<D¬ buyPrice (D,D«Dø¥ØDæ D§D¯D,DæD«¥, ¥Ÿ¥.D_D'D,¥, Dý Google Play)
+00:49:15    2026-09-16 00:49:09.128 [DEBUG] [InventoryCatalogue] ¥?D§D,D«¥< DúDø D3D_D¯D'¥Ÿ: ¥+DæD«Dø D¨¥?D_¥?¥,DøDýD¯DæD«Dø 2698 D¨¥?DæD'D¬Dæ¥,DøD¬
+00:49:15    2026-09-16 00:49:09.136 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+00:49:15    2026-09-16 00:49:09.137 [DEBUG] [InventoryCatalogue] Loaded 3153 items from C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json (version=2026-09-11T07:45:03.5570833Z, has304=True, has307=True)
+00:49:15    2026-09-16 00:49:09.140 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+00:49:16    2026-09-16 00:49:09.499 [DEBUG] [InventoryCatalogue] D¨¥?D_¥?¥,DøDýD¯DæD«Dø ¥+DæD«Dø 145 D¨¥?DæD'D¬Dæ¥,DøD¬ ¥? D¨¥Ÿ¥?¥,¥<D¬ buyPrice (D,D«Dø¥ØDæ D§D¯D,DæD«¥, ¥Ÿ¥.D_D'D,¥, Dý Google Play)
+00:49:16    2026-09-16 00:49:09.505 [DEBUG] [InventoryCatalogue] ¥?D§D,D«¥< DúDø D3D_D¯D'¥Ÿ: ¥+DæD«Dø D¨¥?D_¥?¥,DøDýD¯DæD«Dø 2698 D¨¥?DæD'D¬Dæ¥,DøD¬
+00:49:16    2026-09-16 00:49:09.506 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+00:49:16    2026-09-16 00:49:09.506 [DEBUG] [InventoryCatalogue] Loaded 3153 items from C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json (version=2026-09-11T07:45:03.5570833Z, has304=True, has307=True)
+00:49:16    2026-09-16 00:49:09.576 [DEBUG] [Inventory] TCP catalogue bytes built: count=3153, version=639247095035570833, path=C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+00:49:16    2026-09-16 00:49:09.689 [DEBUG] [Inventory] Cached property definitions count=3153
+00:49:16  ??????? ??????: ????????
+00:49:16  
+00:49:16  === ??? 1: ?????? ProjectRework.Web ===
+00:49:19  ?????? exe ???????? - ????? ????????
+00:49:21      Determining projects to restore...
+00:49:21      All projects are up-to-date for restore.
+00:49:21      ProjectRework.Web -> C:\StandRise\Web\bin\Release\net7.0\ProjectRework.Web.dll
+00:49:21    
+00:49:21    Build succeeded.
+00:49:21        0 Warning(s)
+00:49:21        0 Error(s)
+00:49:21    
+00:49:21    Time Elapsed 00:00:01.57
+00:49:21  ???? (??????): ????????
+00:49:21  
+00:49:21  === ??? 2: ?????? ????????? ===
+00:49:22    
+00:49:22    > projectrework@1.0.0 build
+00:49:22    > vite build
+00:49:22    
+00:49:22    [36mvite v8.2.1 [32mbuilding client environment for production...[36m[39m
+00:49:22    [2K
+00:49:22    transforming...âœ“ 1796 modules transformed.
+00:49:22    rendering chunks...
+00:49:22    computing gzip size...
+00:49:22    dist/index.html                   1.07 kB â”‚ gzip:  0.65 kB
+00:49:22    dist/assets/index-BJ4tccv1.css   16.19 kB â”‚ gzip:  4.13 kB
+00:49:22    dist/assets/index-CFF01EIS.js   221.54 kB â”‚ gzip: 69.38 kB
+00:49:22    
+00:49:22    [32mâœ“ built in 449ms[39m
+00:49:22  ?????? ????????? exit=0
+00:49:23  ? wwwroot ??????: 49
+00:49:23  
+00:49:23  === ??? 3: ?????? ===
+00:49:27  ProjectReworkWeb : LastResult=267009
+00:49:32  ProjectReworkCaddy : LastResult=1
+00:49:32  
+00:49:32  === ??? 4: ???????? ===
+00:49:40  health: ok=True botToken=True site=True links=1
+00:49:40  catalog: ?????=3 ???????=6
+00:49:40  ???? ?????-API ?????? (????? 64)
+00:49:40  ?????-API ????: ok=True ????? ??????=False ?????????=False whitelist=False ????????=2
+00:49:40  ??? ????? ?????-API ?????????? - ?????????
+00:49:40  
+00:49:40  === ???? ===
+00:49:40  ??????? ?????? ????????: True
+00:49:40  ?????? ????? ????????: True
+00:49:40  
+00:49:40  ==== ??? ====

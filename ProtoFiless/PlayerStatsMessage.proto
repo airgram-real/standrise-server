@@ -1,0 +1,50 @@
+syntax = "proto3";
+package Axlebolt.Bolt.Protobuf;
+
+message Stats {
+  repeated PlayerStat stat = 1;
+  repeated Achievement achievement = 2;
+}
+
+message PlayerStat {
+  string name = 1;
+  int32 intValue = 2;
+  float floatValue = 3;
+  float window = 4;
+  StatDefType type = 5;
+  int64 longValue = 6;
+}
+
+message PlayerStats {
+  string playerId = 1;
+  repeated StorePlayerStat stats = 2;
+  repeated Achievement achievements = 3;
+}
+
+message Achievement {
+  string name = 1;
+  string displayName = 2;
+  string displayDescription = 3;
+  int64 unlockTime = 4;
+  bool achieved = 5;
+  bytes icon = 6;
+  bool hidden = 7;
+}
+
+message StorePlayerStat {
+  string name = 1;
+  int32 StoreInt = 2;
+  float StoreFloat = 3;
+  int64 StoreLong = 4;
+}
+
+message StoreAchievement {
+  string name = 1;
+  bool achieved = 2;
+}
+
+enum StatDefType {
+  STATDEF_INT = 0;
+  STATDEF_FLOAT = 1;
+  STATDEF_AVGRATE = 2;
+}

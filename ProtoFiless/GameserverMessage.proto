@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+message ServerHandshake {
+    string gameId = 1;
+    string apiKey = 2;
+    string version = 3;
+}

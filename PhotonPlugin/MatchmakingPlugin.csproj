@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>MatchmakingPlugin</AssemblyName>
+    <RootNamespace>Axlebolt.Standoff.PhotonPlugin</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Reference Include="PhotonHivePlugin">
+      <HintPath>PhotonHivePlugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
+
+

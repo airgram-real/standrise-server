@@ -1,0 +1,88 @@
+10:07:37  Администратор: True
+10:07:37  
+10:07:37  === ШАГ 0: пересборка игрового сервера ===
+10:07:54    === 1. TOOLCHAIN ===
+10:07:54    dotnet: C:\Program Files\dotnet\dotnet.exe
+10:07:54    
+10:07:54    === 2. STOP RPC ===
+10:07:54      stopping dotnet PID 9824
+10:07:54    
+10:07:54    === 3. BUILD ===
+10:07:54    [OK] build succeeded
+10:07:54    
+10:07:54    === 4. START RPC ===
+10:07:54    dll built at 09/15/2026 09:45:39
+10:07:54    
+10:07:54    === 5. POST-START CHECKS ===
+10:07:54    [OK] RPC PID 2940
+10:07:54    [OK] port 2222 is listening
+10:07:54    [OK] port 2224 is listening
+10:07:54    
+10:07:54    === 6. LOG TAIL ===
+10:07:54    2026-09-15 10:07:45.468 [DEBUG] [InventoryCatalogue] Loaded 3153 items from C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json (version=2026-09-11T07:45:03.5570833Z, has304=True, has307=True)
+10:07:54    2026-09-15 10:07:45.652 [DEBUG] [Inventory] TCP catalogue bytes built: count=3153, version=639247095035570833, path=C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+10:07:54    2026-09-15 10:07:45.688 [DEBUG] [Inventory] Cached property definitions count=3153
+10:07:54    2026-09-15 10:07:46.098 [DEBUG] Connecting to database Main 
+10:07:54    2026-09-15 10:07:46.207 [DEBUG] Connecting to database Inventory 
+10:07:54    2026-09-15 10:07:46.225 [DEBUG] [Init] Loaded default clan avatar from: C:\StandRise\clan_default_avatar.jpg (3363 bytes)
+10:07:54    2026-09-15 10:07:46.362 [DEBUG] [Init] Default clan avatar 'clan_default_avatar.jpg' stored in avatars collection (3363 bytes)
+10:07:54    2026-09-15 10:07:46.438 [DEBUG] [AlliesMM] required players = 2 (1v1 (2 Ð¸Ð³Ñ€Ð¾ÐºÐ°))
+10:07:54    2026-09-15 10:07:46.449 [DEBUG] [AlliesMM] Admin set required players = 2 (1v1 (2 Ð¸Ð³Ñ€Ð¾ÐºÐ°))
+10:07:54    2026-09-15 10:07:46.556 [DEBUG] [InventoryCatalogue] Ð¿Ñ€Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð° Ñ†ÐµÐ½Ð° 145 Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°Ð¼ Ñ Ð¿ÑƒÑÑ‚Ñ‹Ð¼ buyPrice (Ð¸Ð½Ð°Ñ‡Ðµ ÐºÐ»Ð¸ÐµÐ½Ñ‚ ÑƒÑ…Ð¾Ð´Ð¸Ñ‚ Ð² Google Play)
+10:07:54    2026-09-15 10:07:46.559 [DEBUG] [InventoryCatalogue] ÑÐºÐ¸Ð½Ñ‹ Ð·Ð° Ð³Ð¾Ð»Ð´Ñƒ: Ñ†ÐµÐ½Ð° Ð¿Ñ€Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð° 2698 Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°Ð¼
+10:07:54    2026-09-15 10:07:46.560 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+10:07:54    2026-09-15 10:07:46.560 [DEBUG] [InventoryCatalogue] Loaded 3153 items from C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json (version=2026-09-11T07:45:03.5570833Z, has304=True, has307=True)
+10:07:54    2026-09-15 10:07:46.561 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+10:07:54    2026-09-15 10:07:46.721 [DEBUG] [InventoryCatalogue] Ð¿Ñ€Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð° Ñ†ÐµÐ½Ð° 145 Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°Ð¼ Ñ Ð¿ÑƒÑÑ‚Ñ‹Ð¼ buyPrice (Ð¸Ð½Ð°Ñ‡Ðµ ÐºÐ»Ð¸ÐµÐ½Ñ‚ ÑƒÑ…Ð¾Ð´Ð¸Ñ‚ Ð² Google Play)
+10:07:54    2026-09-15 10:07:46.727 [DEBUG] [InventoryCatalogue] ÑÐºÐ¸Ð½Ñ‹ Ð·Ð° Ð³Ð¾Ð»Ð´Ñƒ: Ñ†ÐµÐ½Ð° Ð¿Ñ€Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð° 2698 Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°Ð¼
+10:07:54    2026-09-15 10:07:46.728 [DEBUG] [InventoryCatalogue] Watching C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+10:07:54    2026-09-15 10:07:46.729 [DEBUG] [InventoryCatalogue] Loaded 3153 items from C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json (version=2026-09-11T07:45:03.5570833Z, has304=True, has307=True)
+10:07:54    2026-09-15 10:07:46.788 [DEBUG] [Inventory] TCP catalogue bytes built: count=3153, version=639247095035570833, path=C:\StandRise\bin\Release\net7.0\Data\StandRise.inventory_item_definition.json
+10:07:54    2026-09-15 10:07:46.871 [DEBUG] [Inventory] Cached property definitions count=3153
+10:07:54  игровой сервер: СОБРАЛСЯ
+10:07:54  
+10:07:54  === ШАГ 1: фон и логотип ===
+10:07:54  распаковано файлов: 4
+10:07:54    background2.png  (2,398 КБ)
+10:07:54    cursedsouls_background.png  (2,752 КБ)
+10:07:54    cursedsouls_background_logo.png  (465 КБ)
+10:07:54    sactx-2048x2048-ETC2-MainCompressed-ae9891a4.png  (2,959 КБ)
+10:07:54  
+10:07:54  === ШАГ 2: сборка сайта ===
+10:07:55  node: C:\StandRise\Web\node\node-v24.21.0-win-x64
+10:07:57    
+10:07:57    > projectrework@1.0.0 build
+10:07:57    > vite build
+10:07:57    
+10:07:57    [36mvite v8.2.1 [32mbuilding client environment for production...[36m[39m
+10:07:57    [2K
+10:07:57    transforming...✓ 1793 modules transformed.
+10:07:57    rendering chunks...
+10:07:57    computing gzip size...
+10:07:57    dist/index.html                   1.06 kB │ gzip:  0.65 kB
+10:07:57    dist/assets/index-DJJ9jB_3.css   23.41 kB │ gzip:  5.21 kB
+10:07:57    dist/assets/index-o-y3YrJb.js   212.27 kB │ gzip: 66.63 kB
+10:07:57    
+10:07:57    [32m✓ built in 856ms[39m
+10:07:57  сборка сайта exit=0
+10:07:58  в wwwroot файлов: 49
+10:07:58  telegram-web-app.js в index.html: True
+10:07:58  
+10:07:58  === ШАГ 3: автозапуск ===
+10:08:03  ProjectReworkWeb : LastResult=3762504530
+10:08:07  ProjectReworkCaddy : LastResult=1
+10:08:07  
+10:08:07  === ШАГ 4: проверка ===
+10:08:14  порт 8080: слушает
+10:08:14  порт 80: слушает
+10:08:14  порт 443: слушает
+10:08:14  health: ok=True botToken=True site=True links=1
+10:08:14  catalog: голды=5 пропуск=4 первая цена=10
+10:08:14  
+10:08:14  === DNS ===
+10:08:14  projectre.work -> 172.67.138.42, 104.21.70.180
+10:08:14  Это адреса Cloudflare: домен идёт через прокси (оранжевое облако).
+10:08:14  Пока он включён, Let's Encrypt не сможет проверить домен и сертификата не будет.
+10:08:14  В панели Cloudflare переключи запись projectre.work в DNS only (серое облако).
+10:08:14  
+10:08:14  ==== ВСЁ ====

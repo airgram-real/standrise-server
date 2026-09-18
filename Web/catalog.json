@@ -1,0 +1,87 @@
+{
+  "Gold": [
+    {
+      "Id": "g100",
+      "Kind": "gold",
+      "Amount": 100,
+      "Title": "100 GOLD",
+      "Stars": 2,
+      "Cover": "/assets/gold/bigGold100.webp",
+      "Discount": 0
+    },
+    {
+      "Id": "g500",
+      "Kind": "gold",
+      "Amount": 500,
+      "Title": "500 GOLD",
+      "Stars": 6,
+      "Cover": "/assets/gold/bigGold500.webp",
+      "Discount": 0
+    },
+    {
+      "Id": "g3000",
+      "Kind": "gold",
+      "Amount": 3000,
+      "Title": "3 000 GOLD",
+      "Stars": 28,
+      "Cover": "/assets/gold/bigGold3000.webp",
+      "Discount": 7
+    }
+  ],
+  "Pass": [
+    {
+      "Id": "bp",
+      "Kind": "goldpass",
+      "Amount": 0,
+      "Title": "GOLD PASS",
+      "Stars": 50,
+      "Cover": "/assets/bp/bigBP.webp",
+      "Discount": 0
+    },
+    {
+      "Id": "bp10",
+      "Kind": "passplus",
+      "Amount": 10,
+      "Title": "GOLD PASS +10",
+      "Stars": 70,
+      "Cover": "/assets/bp/bigBP10.webp",
+      "Discount": 7
+    },
+    {
+      "Id": "lvl1",
+      "Kind": "levels",
+      "Amount": 1,
+      "Title": "+1 УРОВЕНЬ",
+      "Stars": 5,
+      "Cover": "/assets/bp/cartLevel1.webp",
+      "Discount": 0
+    },
+    {
+      "Id": "lvl10",
+      "Kind": "levels",
+      "Amount": 10,
+      "Title": "+10 УРОВНЕЙ",
+      "Stars": 25,
+      "Cover": "/assets/bp/cartLevel10.webp",
+      "Discount": 10
+    },
+    {
+      "Id": "lvl20",
+      "Kind": "levels",
+      "Amount": 20,
+      "Title": "+20 УРОВНЕЙ",
+      "Stars": 45,
+      "Cover": "/assets/bp/cartLevel20.webp",
+      "Discount": 12
+    },
+    {
+      "Id": "lvl45",
+      "Kind": "levels",
+      "Amount": 45,
+      "Title": "+45 УРОВНЕЙ",
+      "Stars": 75,
+      "Cover": "/assets/bp/cartLevel45.webp",
+      "Discount": 25
+    }
+  ]
+}

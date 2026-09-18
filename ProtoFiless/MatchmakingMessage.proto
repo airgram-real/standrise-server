@@ -1,0 +1,102 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+option csharp_namespace = "Axlebolt.Bolt.Protobuf";
+import "CommonMessage.proto";
+import "FriendsMessage.proto";
+
+enum LobbyType
+{
+    PRIVATE = 0;
+    FRIENDS_ONLY = 1;
+    PUBLIC = 2;
+    INVISIBLE = 3;
+}
+
+enum LobbyPlayerType
+{
+    ANY = 0;
+    MEMBER = 1;
+    SPECTATOR = 2;
+}
+enum LobbyDistanceFilter
+{
+    CLOSE = 0;
+    DEFAULT = 1;
+    FAR = 2;
+    WORLDWIDE = 3;
+}
+
+message GameServerDetails
+{
+    string id = 1;
+    GameServer gameServer = 2;
+    string map = 3;
+    int32 currentPlayers = 4;
+    int32 maxPlayers = 5;
+    int32 botPlayers = 6;
+    bool requirePassword = 7;
+    string version = 8;
+    bool successfulResponse = 9;
+    bool doNotRefresh = 10;
+}
+message Lobby
+{
+    string id = 1;
+    string ownerPlayerId = 2;
+    string name = 3;
+    LobbyType lobbyType = 4;
+    bool joinable = 5;
+    int32 maxMembers = 6;
+    map<string,string> data = 7;
+    repeated PlayerFriend members = 8;
+    repeated PlayerFriend invites = 9;
+    GameServer gameServer = 10;
+    PhotonGame photonGame = 11;
+    int32 maxSpectators = 12;
+    repeated PlayerFriend spectators = 13;
+    repeated PlayerFriend spectatorInvites = 14;
+}
+message LobbyInvite
+{
+    string lobbyId = 1;
+    PlayerFriend inviteCreator = 2;
+    int64 date = 3;
+    LobbyPlayerType playerType = 4;
+}
+
+message JoinLobbyRequest {
+    string lobbyId = 1;
+}
+
+message JoinLobbyAsRequest {
+    string lobbyId = 1;
+    LobbyPlayerType playerType = 2;
+}
+
+message InvitePlayerToLobbyRequest {
+    string invitedPlayerId = 1;
+}
+
+message InvitePlayerToLobbyAsRequest {
+    string invitedPlayerId = 1;
+    LobbyPlayerType playerType = 2;
+}
+
+message RevokePlayerInvitationToLobbyRequest {
+    string revokedPlayerId = 1;
+}
+
+message RefuseInvitationToLobbyRequest {
+    string lobbyId = 1;
+}
+
+message KickPlayerFromLobbyRequest {
+    string kickedPlayerId = 1;
+}
+
+message GetInvitesToLobbyRequest {}
+
+message GetInvitesToLobbyResponse {
+    repeated LobbyInvite lobbyInvites = 1;
+}

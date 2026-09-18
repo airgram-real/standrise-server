@@ -1,0 +1,57 @@
+.aider*
+
+# Build / IDE
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Runtime data & logs
+data/
+logs/
+**/logs/
+*.log
+traffic_hex.log
+auth_sessions.json
+*.flag
+
+# Secrets & local config
+deploy/config.env
+**/local.settings.json
+!deploy/local.settings.example.json
+!**/local.settings.example.json
+*.pem
+*.key
+*.pfx
+
+# Mongo dumps & backups (large / may contain user data)
+deploy/mongo-dump/
+deploy/backups/
+mongo-dump/
+
+# Photon install (use third-party SDK path in repo if present)
+# Keep source plugin; ignore deployed copy on server root if duplicated
+
+# APK / OBB / decode artifacts
+tools/apk-work/
+*.apk
+*.obb
+
+# Web runtime
+Web/caddy/access.log
+Web/node/
+Web/tools/_unity3d/
+**/*.unity3d
+
+# Archives & temp
+*.zip
+deploy/*stdout*
+deploy/*stderr*
+deploy/*report*.txt
+deploy/fullreset-log.txt
+deploy/bootstrap-log.txt
+
+# Python cache
+__pycache__/
+*.pyc

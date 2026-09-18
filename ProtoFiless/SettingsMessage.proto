@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+enum SettingType {
+    STRING = 0;
+    INTEGER = 1;
+    FLOAT = 2;
+    BOOL = 3;
+}
+message GameSetting {
+    string key = 1;
+    string value = 2;
+    bool boolValue = 3;
+    int32 intValue = 4;
+    float floatValue = 5;
+    SettingType type = 6;
+}
+message EncryptedGameSetting {
+    bytes key = 1;
+    bytes value = 2;
+    bool boolValue = 3;
+    int32 intValue = 4;
+    float floatValue = 5;
+    SettingType type = 6;
+}

@@ -1,0 +1,42 @@
+# projectre.work — обратный прокси перед сайтом.
+#
+# Caddy сам получает и продлевает сертификат Let's Encrypt, поэтому вручную
+# ничего выпускать не нужно. Наружу смотрит только он (80 и 443), сам сайт
+# слушает 127.0.0.1:8080 и из интернета недоступен — так его нельзя открыть
+# в обход https.
+
+{
+	# Почта нужна Let's Encrypt для уведомлений об истечении сертификата.
+	email admin@projectre.work
+}
+
+projectre.work, www.projectre.work {
+	encode zstd gzip
+
+	# Заголовки безопасности. frame-ancestors разрешает Telegram открывать
+	# сайт как Mini App — без этого окно в Telegram будет пустым.
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Content-Security-Policy "frame-ancestors https://web.telegram.org https://*.telegram.org"
+		-Server
+	}
+
+	# Cloudflare с удовольствием закэширует /api/* и будет отдавать вчерашнюю
+	# витрину и вчерашний баланс. Запрещаем явно.
+	@api path /api/*
+	header @api Cache-Control "no-store, no-cache, must-revalidate"
+	header @api Pragma "no-cache"
+
+	reverse_proxy 127.0.0.1:8080 {
+		header_up X-Real-IP {remote_host}
+	}
+
+	log {
+		output file C:\StandRise\Web\caddy\access.log {
+			roll_size 20mb
+			roll_keep 5
+		}
+	}
+}

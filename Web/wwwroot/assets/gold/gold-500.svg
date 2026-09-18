@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="240" gradientUnits="userSpaceOnUse"><stop stop-color="#2d3558"/><stop offset="1" stop-color="#171d33"/></linearGradient>
+    <linearGradient id="coin" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe59a"/><stop offset=".45" stop-color="#e7b44d"/><stop offset="1" stop-color="#a86d1f"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="48%"><stop stop-color="#f0c45e" stop-opacity=".4"/><stop offset="1" stop-color="#f0c45e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="240" fill="url(#bg)"/>
+  <circle cx="160" cy="105" r="95" fill="url(#glow)"/>
+  <ellipse cx="118" cy="132" rx="48" ry="48" fill="url(#coin)" stroke="#f7e2a4" stroke-width="4" transform="rotate(-18 118 132)"/>
+  <ellipse cx="210" cy="132" rx="48" ry="48" fill="url(#coin)" stroke="#f7e2a4" stroke-width="4" transform="rotate(16 210 132)"/>
+  <ellipse cx="160" cy="108" rx="56" ry="56" fill="url(#coin)" stroke="#fff1c4" stroke-width="5"/>
+  <text x="160" y="122" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="40" font-weight="800" fill="#6d4010">G</text>
+</svg>

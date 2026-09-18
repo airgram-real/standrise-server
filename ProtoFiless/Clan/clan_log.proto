@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package com.axlebolt.bolt;
+
+option csharp_namespace = "Axlebolt.Bolt.Protobuf";
+
+// Сообщение для логов клана
+message ClanLogMessage {
+    int32 clanLogType = 1;
+    int32 changedClanType = 2;
+    string changedClanName = 3;
+    string changedClanTag = 4;
+    string primaryMember = 5;
+    string secondaryMember = 6;
+    int32 changedMaxMemberCount = 7;
+    int32 assignedRole = 8;
+    int64 timestamp = 9;  // ДОБАВЛЕНО ПОЛЕ TIMESTAMP!
+}
+
+// Тип сообщения в ClanUserMessage
+enum MessageType {
+    CHAT_MESSAGE = 0;
+    LOG_MESSAGE = 1;
+}
+
+// Обертка для сообщений клана (чат + логи)
+message ClanUserMessage {
+    string id = 1;
+    int64 timestamp = 2;
+    MessageType messageType = 3;
+    
+    oneof message {
+        ClanChatMessage chatMessage = 4;
+        ClanLogMessage logMessage = 5;
+    }
+}
+
+// Сообщение чата клана
+message ClanChatMessage {
+    string senderId = 1;
+    string message = 2;
+}

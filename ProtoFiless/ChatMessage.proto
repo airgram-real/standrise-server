@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "GroupsMessage.proto";
+import "FriendsMessage.proto";
+import "PlayerMessage.proto";
+
+message ChatUser
+{
+    PlayerFriend player = 1;
+    Group group = 2;
+    string message = 3;
+    int64 timestamp = 4;
+    int32 unreadMsgsCount = 5;
+}
+
+message UserMessage
+{
+    string senderId = 1;
+    string message = 2;
+    int64 timestamp = 3;
+    bool isRead = 4;
+}
+
+message GlobalChatUserMessage
+{
+    string message = 1;
+    Player sender = 2;
+    int64 timestamp = 3;
+}

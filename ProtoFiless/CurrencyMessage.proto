@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+message Currency {
+    int32 id = 1;
+    float exchangeRatio = 2;
+    repeated int32 exchangebleCurrencies = 3;
+}
+message CurrencyAmount {
+    int32 currencyId = 1;
+    int32 oldValue = 2;
+    float value = 3;
+}

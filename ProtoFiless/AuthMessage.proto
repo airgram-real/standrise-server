@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "CommonMessage.proto";
+
+message Handshake 
+{
+  string ticket = 1;
+}
+
+message AuthGoogle 
+{
+  string gameId = 1;
+  string gameVersion = 2;
+  Platform platform = 3;
+  string authCode = 4;
+}
+
+message GoogleAuthRequest
+{
+	AuthGoogle authGoogle = 1;
+	AppVerification appVerification = 2;
+	DeviceInfo deviceInfo = 3;
+}
+
+message GoogleAuthResponse
+{
+	// Client uses oneof for these two fields.
+	// Only ONE of them should be set at a time.
+	// Currently we always use field 1 (token) only.
+	oneof ticket_oneof {
+		string token = 1;
+		bytes tokenBinary = 2;
+	}
+}
+
+message AuthToken 
+{
+  string gameId = 1;
+  string gameVersion = 2;
+  Platform platform = 3;
+  string authCode = 4;
+}
+
+message AppVerification 
+{
+string Signature = 1;
+string ApkHash = 2;
+repeated string AllApps = 3;
+bool IsRooted = 4;
+}
+
+message DeviceInfo
+{
+	string deviceId = 1;
+	string deviceModel = 2;
+}

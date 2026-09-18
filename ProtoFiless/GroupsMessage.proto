@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "PlayerMessage.proto";
+
+message Group
+{
+    string id = 1;
+    string name =2;
+    string avatarId = 3;
+    repeated Player players = 4;
+}

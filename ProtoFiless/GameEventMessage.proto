@@ -1,0 +1,59 @@
+﻿syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "CommonMessage.proto";
+import "CurrencyMessage.proto";
+import "InventoryMessage.proto";
+
+message GamePass
+{
+   string id = 1;
+   string code = 2;
+   int32 keyItemDefinitionId = 3;
+   repeated GamePassLevel levels = 4;
+   int32 currentLevel = 5;
+}
+
+message GamePassLevel
+{
+	int32 level = 1;
+	int32 minPoints = 2;
+	RewardInfo reward = 3;
+}
+
+message GetCurrentGameEventsResponse
+{
+	repeated CurrentGameEvent gameEvents = 1;
+}
+
+message CurrentGameEvent
+{
+	string id = 1;
+	string code = 2;
+	int64 dateSince = 3;
+	int64 dateUntil = 4;
+	int32 durationDays = 5;
+	repeated GamePass gamePasses = 6;
+	int32 points = 7;
+	int32 currentDay = 8;
+}
+
+message ProgressGameEventRequest
+{
+	string gameEventId = 1;
+	int32 points = 2;
+}
+
+message ProgressGameEventResponse
+{
+	int32 points = 1;
+	map<string, int32> levels = 2;
+	Reward reward = 3;
+}
+message OnGamePassChangedEvent
+{
+	string eventId = 1;
+	int32 points = 2;
+	map<string, int32> levels = 3;
+	Reward reward = 4;
+}

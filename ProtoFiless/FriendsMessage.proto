@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "PlayerMessage.proto";
+enum RelationshipStatus
+{
+    None = 0;
+    Blocked = 1;
+    RequestRecipient = 2;
+    Friend = 3;
+    RequestInitiator = 4;
+    Ignored = 5;
+}
+enum MessageStatus
+{
+    Sent = 0;
+    Received = 1;
+    Read = 2;
+    SentFailed = 3;
+}
+message PlayerFriend 
+{
+    Player player = 1;
+    RelationshipStatus relationshipStatus = 2;
+    int64 lastRelationshipUpdate = 3;
+}

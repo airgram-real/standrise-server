@@ -1,0 +1,9 @@
+==== BUILD SITE ==== 
+Tue 09/15/2026  8:54:22.42 
+ 
+--- npm run build --- 
+'"npm"' is not recognized as an internal or external command,
+operable program or batch file.
+exitcode=1 
+ 
+==== BUILD FAILED ==== 

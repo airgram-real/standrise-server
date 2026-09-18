@@ -1,0 +1,124 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "CurrencyMessage.proto";
+
+enum StoreCode {
+    GOOGL_PLAY_STORE = 0;
+    APPLE_APP_STORE = 1;
+    AMAZON_STORE = 2;
+}
+enum PropertyType {
+    INT = 0;
+    FLOAT = 1;
+    STRING = 2;
+    BOOLEAN = 3;
+    LONG = 4;
+    ITEM_ID = 5;
+}
+enum PropertySetByType {
+    GAME_SERVER = 0;
+    OFFICAL_GAME_SERVER = 1;
+    CLIENT = 2;
+}
+message PlayerInventory {
+    repeated CurrencyAmount currencies = 1;
+    repeated InventoryItem inventoryItems = 2;
+}
+message InventoryItem {
+    int32 id = 1;
+    int32 itemDefinitionId = 2;
+    int32 quantity = 3;
+    int32 flags = 4;
+    int64 date = 5;
+    map<string,InventoryItemProperty> properties = 6;
+}
+message InventoryItemDefinition {
+    int32 id = 1;
+    string displayName = 2;
+    map<string,string> properties = 3;
+    repeated CurrencyAmount buyPrice = 4;
+    repeated CurrencyAmount sellPrice = 5;
+    bool canBeTraded = 6;
+}
+message InventoryItemPropertyDefinitions {
+    int32 itemDefinitionId = 1;
+    map<string, InventoryItemPropertyDefinition> definitions = 2;
+}
+message InventoryItemPropertyDefinition {
+    string name = 1;
+    PropertyType propertyType = 2;
+    bool saveInTrade = 3;
+    PropertySetByType setByType = 4;
+}
+message InventoryItemAmount {
+    int32 inventoryItemDefinitionId = 1;
+    int32 value = 2;
+}
+message ExchangeResult {
+    repeated CurrencyAmount currencies = 1;
+    repeated InventoryItem inventoryItems = 2;
+}
+message InventoryItemPropertyes {
+    int32 id = 1;
+    repeated InventoryItemProperty properties = 2;
+}
+message InventoryItemProperty {
+    PropertyType type = 1;
+    int32 intValue = 2;
+    float floatValue = 3;
+    string stringValue = 4;
+    bool booleanValue = 5;
+}
+message InventoryItemProperties
+{
+    int32 id = 1;
+    map<string,InventoryItemProperty> properties = 2;
+}
+message ItemFlags {
+    map<int32,int32> flags = 1;
+}
+message RecipeInfo
+{
+    string recipe = 1;
+    repeated ExchangeEntity entities = 2;
+}
+message ExchangeEntity {
+    repeated InventoryItemAmount inventoryItems = 1;
+    repeated CurrencyAmount currencies = 2;
+}
+message RewardInfo
+{
+    repeated InventoryItemAmount items = 1;
+    repeated CurrencyAmount currencies = 2;
+    repeated RecipeInfo recipes = 3;
+}
+message Reward
+{
+    repeated InventoryItem items = 1;
+    repeated CurrencyAmount currencies = 2;
+}
+message PlayerInventoryItem {
+    int32 id = 1;
+    int32 itemDefinitionId = 2;
+    int32 quantity = 3;
+    int32 flags = 4;
+    int64 date = 5;
+    map<string,InventoryItemProperty> properties = 6;
+}
+message MountInventoryItemRequest {
+    int32 consumedItemId = 1;
+    int32 modifiedItemId = 2;
+    string modificationName = 3;
+}
+message MountInventoryItemResponse {
+    PlayerInventoryItem modifiedItem = 1;
+    PlayerInventoryItem unmountedItem = 2;
+}
+message UnmountInventoryItemRequest {
+    int32 modifiedItemId = 1;
+    string modificationName = 2;
+}
+message UnmountInventoryItemResponse {
+    PlayerInventoryItem unmountedItem = 1;
+}

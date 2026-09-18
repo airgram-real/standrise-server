@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Сайт projectre.work. Отдельный процесс и отдельный проект: игровой сервер
+    (C:\StandRise\VsCode.csproj) он не подключает и не трогает вообще — падение
+    в вебе не может уронить игру.
+
+    Выдача купленного происходит НЕ здесь, а в уже работающем боте
+    (DonateBotService.FulfilPayload). Сайт только выпускает ссылку на инвойс
+    с тем же payload, что бот выставляет сам, поэтому логика выдачи одна на всех
+    и разъехаться не может.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ProjectRework.Web</AssemblyName>
+    <RootNamespace>ProjectRework.Web</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="web.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="catalog.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

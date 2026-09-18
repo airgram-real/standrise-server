@@ -1,0 +1,49 @@
+08:43:33  Администратор: True
+08:43:33  
+08:43:33  === ШАГ 1: Node.js ===
+08:43:33  качаю https://nodejs.org/dist/v24.21.0/node-v24.21.0-win-x64.zip
+08:45:48  скачано 35.9 МБ, распаковываю
+08:48:13  ok: v24.21.0
+08:48:13  
+08:48:13  === ШАГ 2: Caddy ===
+08:48:13  качаю caddy
+08:52:40  скачано 46.8 МБ
+08:52:40  
+08:52:40  === ШАГ 3: сборка бэкенда ===
+08:52:40  dotnet: 7.0.410
+08:52:40  ASP.NET Core 7: есть
+08:52:46      Determining projects to restore...
+08:52:46      Restored C:\StandRise\Web\ProjectRework.Web.csproj (in 83 ms).
+08:52:46      ProjectRework.Web -> C:\StandRise\Web\bin\Release\net7.0\ProjectRework.Web.dll
+08:52:46    
+08:52:46    Build succeeded.
+08:52:46        0 Warning(s)
+08:52:46        0 Error(s)
+08:52:46    
+08:52:46    Time Elapsed 00:00:06.15
+08:52:46  сборка бэкенда exit=0
+08:52:46  
+08:52:46  === ШАГ 4: сборка сайта ===
+08:52:48    
+08:52:48    > projectrework@1.0.0 build
+08:52:48    > vite build
+08:52:48    
+08:52:48    '"node"' is not recognized as an internal or external command,
+08:52:48    operable program or batch file.
+08:52:48  сборка сайта exit=1
+08:52:48  dist скопирован в wwwroot: 16 файлов
+08:52:48  
+08:52:48  === ШАГ 5: домен и службы ===
+08:52:52  открыт порт 80
+08:52:52  открыт порт 443
+08:52:52  projectre.work -> 172.67.138.42, 104.21.70.180
+08:52:52  внешний адрес сервера: 84.21.173.237
+08:52:52  ВНИМАНИЕ: DNS не указывает на этот сервер, сертификат не выпустится
+08:52:55  ProjectReworkWeb : 
+08:52:59  ProjectReworkCaddy : Running
+08:52:59  
+08:52:59  === ШАГ 6: проверка ===
+08:53:06  health не ответил: Unable to connect to the remote server
+08:53:08  catalog не ответил: Unable to connect to the remote server
+08:53:08  
+08:53:08  ==== ВСЁ ====

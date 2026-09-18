@@ -1,0 +1,11 @@
+{
+  "Port": 8080,
+  "BindAddress": "127.0.0.1",
+  "PublicUrl": "https://projectre.work",
+  "ServerSettingsPath": "C:\\StandRise\\bin\\Release\\net7.0\\local.settings.json",
+  "LinkedUsersPath": "C:\\StandRise\\donate_bot_users_89099930.json",
+  "BotRolesPath": "C:\\StandRise\\bot_roles.json",
+  "SiteRoot": "C:\\StandRise\\Web\\wwwroot",
+  "InitDataMaxAgeSeconds": 86400,
+  "GameApiUrl": "http://127.0.0.1:2224"
+}

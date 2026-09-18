@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+import "CommonMessage.proto";
+import "InventoryMessage.proto";
+enum AuthType {
+    GooglePlay = 0;
+}
+enum OnlineStatus {
+    StateOffline = 0;
+    StateOnline = 1;
+    StateBusy = 2;
+    StateAway = 3;
+    StateSnooze = 4;
+    StateLookingToTrade = 5;
+    StateLookingToPlay = 6;
+}
+message PlayInGame {
+    string gameCode = 1;
+    string gameVersion = 2;
+    string lobbyId = 3;
+    PhotonGame photonGame = 4;
+}
+message PlayerStatus {
+    string playerId = 1;
+    PlayInGame playInGame = 2;
+    OnlineStatus onlineStatus = 3;
+}
+
+
+message Attribute {
+    PropertyType type = 1;
+    int32 int = 2;
+    float float = 3;
+    string string = 4;
+    bool boolean = 5;
+}
+
+message Attributes {
+    map<string, Attribute> map = 1;
+}
+
+message PlayerBan {
+    int32 banCode = 1;
+    string message = 2;
+    int64 until = 3;
+}
+message Player {
+    string id = 1;
+    string uid = 2;
+    string name = 3;
+    string avatarId = 4;
+    int32 timeInGame = 5;
+    PlayerStatus playerStatus = 6;
+    int64 logoutDate = 7;
+    int64 registrationDate = 8;
+    Attributes attributes = 9;
+    string testerRole = 10;
+    repeated PlayerBan bans = 11;
+}

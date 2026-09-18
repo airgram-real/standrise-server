@@ -1,0 +1,25 @@
+{
+  "_comment": "Скопируйте в local.settings.json рядом с VsCode.dll и отредактируйте под свой ПК",
+
+  "PublicIp": "127.0.0.1",
+  "_PublicIp_help": "IP для клиента и Photon. LAN: 192.168.x.x, только этот ПК: 127.0.0.1, интернет: ваш белый IP",
+
+  "RpcPort": 2222,
+  "HttpApiPort": 2224,
+  "PhotonMasterPort": 5055,
+  "PhotonGamePort": 5056,
+
+  "MongoMain": {
+    "DatabaseName": "Main",
+    "Address": "127.0.0.1",
+    "Port": "2077",
+    "Uri": "mongodb://USER:PASSWORD@127.0.0.1:2077/?authSource=admin&authMechanism=SCRAM-SHA-256"
+  },
+
+  "MongoGame": {
+    "DatabaseName": "Inventory",
+    "Address": "127.0.0.1",
+    "Port": "1337",
+    "Uri": "mongodb://USER:PASSWORD@127.0.0.1:1337/?authSource=admin&authMechanism=SCRAM-SHA-256"
+  }
+}

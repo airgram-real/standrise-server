@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package Axlebolt.Bolt.Protobuf2;
+
+message UserEvent {
+string category = 1;
+string event = 2;
+int32 value = 3;
+bool increment = 4;
+bool storeCountry = 5;
+}
